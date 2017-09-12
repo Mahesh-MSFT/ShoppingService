@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  
+  shoppingwebapp:
+    image: shoppingwebapp
+    build:
+      context: ./../ShoppingWebApp
+      dockerfile: Dockerfile
+
+  shoppingservice:
+    image: shoppingservice
+    build:
+      context: ./ShoppingService
+      dockerfile: Dockerfile
+    container_name: shopping-service-api
